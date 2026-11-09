@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crashlens"
+version = "1.0.0"
+authors = [
+  { name="Harold Duban Cartagena Moreno", email="haroldcartagena16@gmail.com" },
+]
+description = "AI-Powered Terminal Log & Incident Triage Engine with Sentry-style Fingerprinting"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Logging",
+    "Topic :: Software Development :: Bug Tracking",
+]
+dependencies = [
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+crashlens = "crashlens.cli.app:main"
+
+[project.urls]
+"Homepage" = "https://github.com/H-ereje/crashlens"
+"Bug Tracker" = "https://github.com/H-ereje/crashlens/issues"
